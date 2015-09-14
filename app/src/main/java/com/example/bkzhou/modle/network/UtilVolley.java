@@ -465,6 +465,7 @@ public class UtilVolley {
 
         /**
          * 请求数据
+         * 基本方法get带/参数，直接通过此方法
          *
          * @param method       请求方法POST,DELETE,GET etc.
          * @param url          地址

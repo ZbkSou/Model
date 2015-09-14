@@ -28,7 +28,8 @@ public class Model {
     }
 
     /**
-     * GET请求自带参数
+     * GET请求自带参数 URL携带参数 需要把params和url拼接之后发送
+     * https://www.baidu.com/s?wd=%E9%83%BD%E6%98%AF&rsv_spt=1&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=0&rsv_sug3=4&rsv_sug1=2&inputT=1808&rsv_sug4=2843
      *
      * @param url
      * @param params
@@ -37,6 +38,13 @@ public class Model {
     public void get(String url, Map<String, String> params, UtilVolley.JsonResponse JsonResponse) {
         mUtilVolley.get(url, params, JsonResponse);
     }
+
+    /**
+     * GET请求
+     *http://www.ihaveu.com/data/common/files/630/get
+     * @param url
+     * @param JsonResponse
+     */
 
     public void get(String url, UtilVolley.JsonResponse JsonResponse) {
         mUtilVolley.get(url, JsonResponse);

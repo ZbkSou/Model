@@ -1,5 +1,7 @@
 package com.example.bkzhou.modle.network;
 
+import android.util.Log;
+
 import com.android.volley.AuthFailureError;
 import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
@@ -25,7 +27,7 @@ import java.util.Map;
 /**
  * Created by bkzhou on 15-9-12.
  */
-public class MultipartRequest {
+public class MultipartRequest extends Request<String> {
 
     private MultipartEntity entity = new MultipartEntity();
 
@@ -168,7 +170,7 @@ public class MultipartRequest {
     }
     @Override
     public String getBodyContentType() {
-        Log.i("ghq", entity.getContentType().getName() + "   .." + entity.getContentType().getValue());
+        Log.i("bk", entity.getContentType().getName() + "   .." + entity.getContentType().getValue());
         return entity.getContentType().getValue();
     }
 
